@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Edit Book</h1>
+    <div class="row">
+        <div class="col-md-6">
+        <form (ngSubmit)="updateProduct(product._id)" #productForm="ngForm">
+            <div class="form-group">
+                <label for="name">Product Name</label>
+                <input type="text" class="form-control" [(ngModel)]="product.productName" name="productName" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Product Description</label>
+                <input type="text" class="form-control" [(ngModel)]="product.productDescription" name="productDescription" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Price</label>
+                <input type="number" class="form-control" [(ngModel)]="product.amount" name="amount" required>
+            </div>
+            <div class="form-group">
+            <button type="submit" class="btn btn-success" [disabled]="!productForm.form.valid">Update</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+      

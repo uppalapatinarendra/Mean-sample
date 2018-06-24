@@ -1,0 +1,17 @@
+<div class="container">
+    <dl class="list">
+        <dt>Product Name</dt>
+        <dd>{{product.productName }}</dd>
+        <dt>Product Description</dt>
+        <dd>{{ product.productDescription }}</dd>
+        <dt>Price</dt>
+        <dd>{{ product.amount }}</dd>
+    </dl>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a [routerLink]="['/product-edit', product._id]" class="btn btn-success">EDIT</a>
+        <button class="btn btn-danger" type="button" (click)="deleteProduct(product._id)">DELETE</button>
+    </div>
+</div>
+
